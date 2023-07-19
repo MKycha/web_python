@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY SITE</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
     <header>
@@ -14,8 +15,8 @@
     <h1>Заголовок 1го уровня</h1>
     <h6>Заголовок 6го уровня</h6>
 
-    <div>
-        <div>
+    <div class="content">
+        <div id="el_1">
             <h4>Элемент 1</h4>
             <p>
                 <!-- Текст-рыба -->
@@ -35,7 +36,7 @@
             </p>
         </div>
     </div>
-    <div>
+    <div class="content">
         <a href="http://google.com" target="_blank">ССЫЛКА</a>
         <a href="http://looky.com" target="_blank">
             <img src="1.jpeg" alt="memes" style="width: 300px;">
@@ -46,6 +47,7 @@
         <h1>Подвал сайта</h1>
     </footer>
     <style>
+        /* селектор по тэгу */
         div {
             border: 2px solid green;
             margin: 10px;

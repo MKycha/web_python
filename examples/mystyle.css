@@ -1,0 +1,15 @@
+/* селектор по тэгу (по типу элемента) */
+h1 {
+    color: dodgerblue;
+}
+
+/* Селектор по классу */
+.content {
+    border-color: maroon;
+}
+
+/* Селектор по идентификатору */
+#el_1 {
+    background-color: rgb(79, 24, 175);
+    color: white;
+}
