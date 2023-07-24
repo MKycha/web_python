@@ -10,5 +10,9 @@ def home ():
 def p_2 ():
     return render_template("page_2.html")
 
+@app.route("/page_3")
+def p_3 ():
+    return render_template("page_3.html")
+
 def create_app():
     return app
