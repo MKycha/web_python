@@ -56,6 +56,19 @@ main {
     grid-area: m;
 }
 
+.content table {
+    border: 2px solid green;
+}
+.content td {
+    padding: 5px;
+    border: 1px solid rgb(226, 186, 9);
+}
+.content th {
+    padding: 5px;
+    background-color: rgb(103, 60, 8);
+    color: aliceblue;
+}
+
 footer {
     grid-area: f;
 }

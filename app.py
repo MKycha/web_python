@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request
 from pwd_gen import pwdGenerator
+import db 
+
+DB_PATH = "database/site.db"
 
 app = Flask(__name__)
 
@@ -17,11 +20,14 @@ def p_2 ():
 
         if password != None and salt != None and n_char != None:
             result = pwdGenerator(password, salt, n_char)
+        
+        db.write_db(DB_PATH, [(password, salt, n_char, result)])
+
     return render_template("page_2.html", data = result)
 
 @app.route("/page_3")
 def p_3 ():
-    return render_template("page_3.html")
+    return render_template("page_3.html", data=db.read_db(DB_PATH))
 
 # Тут обрабатывается GET-запрос с параметрами
 @app.route("/test")
@@ -34,4 +40,5 @@ def p_4 ():
 
 
 def create_app():
+    db.create_db(DB_PATH)
     return app
