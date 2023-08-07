@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from pwd_gen import pwdGenerator
 import db 
 
-DB_PATH = "database/site.db"
+DB_PATH = "/home/MKycha/web_python/database/site.db"
 
 app = Flask(__name__)
 
